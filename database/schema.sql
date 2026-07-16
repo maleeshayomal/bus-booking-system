@@ -181,7 +181,7 @@ CREATE TABLE IF NOT EXISTS otp_verifications (
 
 -- ------------------------------------------------------------
 -- Helpful Indexes
--- ------------------------------------------------------------
+-- -------------------------------------------------------------
 CREATE INDEX idx_routes_origin_destination ON routes(origin, destination);
 CREATE INDEX idx_schedules_route_date ON schedules(route_id, travel_date);
 CREATE INDEX idx_bookings_phone ON bookings(passenger_phone);
