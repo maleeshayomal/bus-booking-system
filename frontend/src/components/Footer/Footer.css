@@ -1,0 +1,32 @@
+.site-footer {
+  background: #fff;
+  border-top: 1px solid var(--color-border);
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.footer-brand {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-payments {
+  display: flex;
+  gap: 14px;
+  font-weight: 500;
+}

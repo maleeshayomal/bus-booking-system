@@ -1,0 +1,65 @@
+.route-timeline {
+  padding: 18px;
+}
+
+.route-timeline-title {
+  margin: 0 0 14px;
+  font-size: 15px;
+}
+
+.route-timeline-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.route-timeline-item {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.route-timeline-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 14px;
+  bottom: -6px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.route-timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.route-timeline-dot.start {
+  background: var(--color-primary);
+}
+
+.route-timeline-dot.end {
+  background: var(--color-accent);
+}
+
+.route-timeline-name {
+  font-weight: 600;
+  font-size: 13.5px;
+}
+
+.route-timeline-time {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.route-timeline-note {
+  font-size: 11px;
+  color: var(--color-primary);
+  margin-top: 2px;
+}

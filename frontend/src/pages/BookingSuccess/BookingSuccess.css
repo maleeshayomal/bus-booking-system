@@ -1,0 +1,65 @@
+.booking-success-page {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.success-card {
+  padding: 32px;
+  max-width: 460px;
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 40px;
+}
+
+.success-card h1 {
+  margin: 8px 0 4px;
+  font-size: 22px;
+}
+
+.success-card > p {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.ticket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border: 1px dashed var(--color-border);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: left;
+}
+
+.ticket-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.ticket-info div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  gap: 10px;
+}
+
+.ticket-info span {
+  color: var(--color-text-muted);
+}
+
+.success-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.success-actions .btn {
+  flex: 1;
+}

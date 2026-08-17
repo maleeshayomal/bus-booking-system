@@ -5,7 +5,8 @@ const { protect, adminOnly } = require("../middleware/authMiddleware");
 
 router.get("/", getBuses);
 router.get("/:id", getBus);
-router.post("/", protect, adminOnly, createBus);
+// router.post("/", protect, adminOnly, createBus);
+router.post("/",  createBus);
 router.put("/:id", protect, adminOnly, updateBus);
 router.delete("/:id", protect, adminOnly, deleteBus);
 

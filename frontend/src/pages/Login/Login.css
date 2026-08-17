@@ -1,0 +1,32 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.login-card {
+  padding: 30px;
+  max-width: 380px;
+  width: 100%;
+}
+
+.login-card h1 {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.login-card label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  display: block;
+  margin: 12px 0 4px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 13px;
+  margin-bottom: 14px;
+}

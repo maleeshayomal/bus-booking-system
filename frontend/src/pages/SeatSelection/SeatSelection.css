@@ -1,0 +1,48 @@
+.seat-selection-page {
+  padding: 24px 0 40px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.seat-selection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.seat-selection-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.seat-selection-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.seat-selection-panel {
+  padding: 20px;
+}
+
+.seat-selection-panel h3 {
+  margin: 0 0 10px;
+}
+
+@media (max-width: 800px) {
+  .seat-selection-grid {
+    grid-template-columns: 1fr;
+  }
+}

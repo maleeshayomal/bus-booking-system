@@ -1,0 +1,68 @@
+.bus-details-page {
+  padding: 24px 0 40px;
+}
+
+.bus-details-hero {
+  background: linear-gradient(120deg, #0f766e, #1e40af);
+  color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 14px 0 20px;
+}
+
+.bus-details-hero h1 {
+  margin: 8px 0 4px;
+  font-size: 26px;
+}
+
+.bus-details-hero p {
+  margin: 0 0 10px;
+  opacity: 0.9;
+}
+
+.bus-details-price {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bus-details-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+}
+
+.bus-details-main {
+  padding: 20px;
+}
+
+.bus-details-main h3 {
+  margin: 0 0 14px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.info-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info-grid span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.status-ok {
+  color: var(--color-accent);
+}
+
+@media (max-width: 800px) {
+  .bus-details-grid {
+    grid-template-columns: 1fr;
+  }
+}

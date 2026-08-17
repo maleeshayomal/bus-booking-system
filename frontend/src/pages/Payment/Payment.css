@@ -1,0 +1,24 @@
+.payment-page {
+  padding: 24px 0 40px;
+  max-width: 480px;
+}
+
+.otp-card {
+  padding: 24px;
+  text-align: center;
+}
+
+.otp-card h3 {
+  margin: 0 0 8px;
+}
+
+.otp-card p {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.otp-error {
+  color: var(--color-danger);
+  font-size: 13px;
+  margin: -6px 0 10px;
+}

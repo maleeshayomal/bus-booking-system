@@ -1,0 +1,68 @@
+.bus-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.bus-card-image {
+  height: 130px;
+  background: linear-gradient(135deg, #1e40af, #0f766e), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"></svg>');
+  background-blend-mode: multiply;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.bus-card-tag {
+  background: rgba(255,255,255,0.9);
+  color: var(--color-primary-dark);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.bus-card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bus-card-route {
+  margin: 0;
+  font-size: 16px;
+}
+
+.bus-card-route .arrow {
+  color: var(--color-primary);
+}
+
+.bus-card-operator {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.bus-card-time {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bus-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4px 0 8px;
+}
+
+.bus-card-price {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}

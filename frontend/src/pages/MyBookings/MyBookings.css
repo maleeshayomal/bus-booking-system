@@ -1,0 +1,50 @@
+.my-bookings-page {
+  padding: 24px 0 40px;
+}
+
+.empty-state {
+  padding: 30px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.bookings-table-wrap {
+  overflow-x: auto;
+  padding: 6px;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 640px;
+}
+
+.bookings-table th {
+  text-align: left;
+  padding: 12px 14px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bookings-table td {
+  padding: 14px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.bookings-table tr:last-child td {
+  border-bottom: none;
+}
+
+.mono {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.muted {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}

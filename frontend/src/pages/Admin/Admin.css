@@ -1,0 +1,447 @@
+.admin-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  width: 230px;
+  background: #0f172a;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 14px;
+  flex-shrink: 0;
+}
+
+.admin-logo {
+  font-weight: 800;
+  font-size: 17px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.admin-logo span {
+  color: #60a5fa;
+  font-weight: 600;
+  font-size: 13px;
+  margin-left: 4px;
+}
+
+.admin-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #cbd5e1;
+}
+
+.admin-nav-item:hover {
+  background: #1e293b;
+}
+
+.admin-nav-item.active {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+}
+
+.admin-nav-icon {
+  font-size: 15px;
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid #1e293b;
+  font-size: 12.5px;
+}
+
+.admin-user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+}
+
+.admin-user-role {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 24px 28px;
+  overflow-x: hidden;
+}
+
+.admin-page-title {
+  font-size: 21px;
+  margin: 0 0 4px;
+}
+
+.admin-page-subtitle {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+.admin-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stat-card {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.stat-card-value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stat-card-label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.admin-grid-2 {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 18px;
+}
+
+.admin-panel {
+  padding: 18px;
+}
+
+.admin-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.admin-panel-header h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.muted {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.muted-link {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 160px;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.chart-bar {
+  flex: 1;
+  background: linear-gradient(180deg, #3b82f6, #1e40af);
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+}
+
+.recent-bookings {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recent-bookings li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rb-name {
+  font-weight: 600;
+  font-size: 13.5px;
+}
+
+.admin-toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.admin-toolbar input,
+.admin-search-input {
+  flex: 1;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 13px;
+}
+
+.admin-search-input {
+  max-width: 280px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.admin-table-title {
+  font-weight: 600;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.btn-outline.danger {
+  color: var(--color-danger);
+  border-color: #fecaca;
+}
+
+.seat-bar {
+  width: 80px;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.seat-bar-fill {
+  height: 100%;
+  background: var(--color-primary);
+}
+
+.admin-pagination {
+  padding: 12px 16px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* Route management */
+.route-grid {
+  align-items: start;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.form-row > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-row label,
+.section-label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.form-row input,
+.form-row select {
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 13px;
+}
+
+.section-label {
+  margin: 16px 0 8px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.stops-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.stop-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stop-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  flex-shrink: 0;
+}
+.stop-dot.start { background: var(--color-primary); }
+.stop-dot.end { background: var(--color-accent); }
+
+.stop-name {
+  flex: 2;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  font-size: 13px;
+}
+
+.stop-type {
+  flex: 1.4;
+  white-space: nowrap;
+}
+
+.stop-time {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  font-size: 13px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.active-routes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.active-routes-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Seat management */
+.trip-selector {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.seat-summary {
+  display: flex;
+  gap: 10px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.seat-monitor-card {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .admin-sidebar {
+    width: 70px;
+  }
+  .admin-nav-item span:last-child,
+  .admin-logo span,
+  .admin-user-name,
+  .admin-user-role {
+    display: none;
+  }
+  .admin-logo {
+    text-align: center;
+    font-size: 0;
+  }
+  .admin-logo::before {
+    content: "LT";
+    font-size: 16px;
+  }
+  .stat-grid,
+  .stat-grid-3,
+  .admin-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}

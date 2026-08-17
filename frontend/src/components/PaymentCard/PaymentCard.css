@@ -1,0 +1,72 @@
+.payment-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 8px;
+}
+
+.payment-method {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.payment-method.active {
+  border-color: var(--color-primary);
+  background: #eff6ff;
+  color: var(--color-primary-dark);
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.payment-form label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.payment-form input {
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 13px;
+}
+
+.payment-form-row {
+  display: flex;
+  gap: 10px;
+}
+.payment-form-row > div {
+  flex: 1;
+}
+
+.payment-redirect {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
