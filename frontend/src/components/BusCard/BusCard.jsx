@@ -18,7 +18,7 @@ export default function BusCard({ bus }) {
         </p>
         <div className="bus-card-footer">
           <span className="badge badge-success">{bus.status}</span>
-          <span className="bus-card-price">LKR {bus.price.toLocaleString()}</span>
+          <span className="bus-card-price">LKR {Number(bus?.price || 0).toLocaleString()}</span>
         </div>
         <button className="btn btn-primary btn-block" onClick={() => navigate(`/bus/${bus.id}`)}>
           View Details
