@@ -7,6 +7,9 @@ import Payment from "./pages/Payment/Payment";
 import BookingSuccess from "./pages/BookingSuccess/BookingSuccess";
 import MyBookings from "./pages/MyBookings/MyBookings";
 import Login from "./pages/Login/Login";
+import Schedules from "./pages/Schedules/Schedules";
+import Refund from "./pages/Refund/Refund";
+import Contact from "./pages/Contact/Contact";
 import AdminLayout from "./pages/Admin/AdminLayout";
 import Dashboard from "./pages/Admin/Dashboard";
 import BusManagement from "./pages/Admin/BusManagement";
@@ -19,6 +22,9 @@ export default function AppRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/search" element={<SearchResults />} />
+      <Route path="/schedules" element={<Schedules />} />
+      <Route path="/refund" element={<Refund />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/bus/:id" element={<BusDetails />} />
       <Route path="/seat-selection" element={<SeatSelection />} />
       <Route path="/payment" element={<Payment />} />

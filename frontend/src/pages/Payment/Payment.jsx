@@ -62,7 +62,7 @@ export default function Payment() {
     <div className="container payment-page">
       <h1 className="page-title">Complete Your Booking</h1>
       <p className="page-subtitle">
-        {bus.from} → {bus.to} · Seats: {booking.selectedSeats.join(", ")}
+        {bus.from} → {bus.to} · Seats: {booking.selectedSeats.join(", ")} · Passenger: {booking.passenger.fullName} ({booking.passenger.gender === "female" ? "Female" : "Gent"})
       </p>
 
       {!booking.otpVerified ? (

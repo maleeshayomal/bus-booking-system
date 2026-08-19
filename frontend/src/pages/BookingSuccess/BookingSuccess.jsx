@@ -30,7 +30,7 @@ export default function BookingSuccess() {
             <div><span>Booking ID</span><strong>{ticketId}</strong></div>
             <div><span>Route</span><strong>{bus?.from} → {bus?.to}</strong></div>
             <div><span>Seats</span><strong>{booking.selectedSeats.join(", ")}</strong></div>
-            <div><span>Passenger</span><strong>{booking.passenger.fullName}</strong></div>
+            <div><span>Passenger</span><strong>{booking.passenger.fullName} ({booking.passenger.gender === "female" ? "Female" : "Gent"})</strong></div>
             <div><span>Departure</span><strong>{bus?.departure}</strong></div>
           </div>
           <div className="ticket-qr">

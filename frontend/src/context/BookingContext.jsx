@@ -6,7 +6,7 @@ const initialState = {
   searchParams: { from: "Colombo", to: "Kandy", date: "", seats: 1 },
   selectedBus: null,
   selectedSeats: [],
-  passenger: { fullName: "", phone: "", email: "" },
+  passenger: { fullName: "", phone: "", email: "", gender: "gent", seatGenders: {} },
   otpVerified: false,
   bookingResult: null,
 };

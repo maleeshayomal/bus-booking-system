@@ -1,66 +1,248 @@
 .booking-panel {
-  padding: 20px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .booking-panel-title {
-  margin: 0 0 6px;
-  font-size: 16px;
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text);
 }
 
 .booking-panel-row {
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
+  font-size: 13.5px;
   color: var(--color-text-muted);
 }
 
 .booking-panel-seats {
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .booking-panel-total {
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 800;
+  font-size: 17px;
   border-top: 1px dashed var(--color-border);
-  padding-top: 10px;
+  padding-top: 12px;
   margin-top: 4px;
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
 }
 
 .booking-panel-form {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin: 6px 0;
+  gap: 14px;
+  margin: 10px 0 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border);
 }
 
 .booking-panel-form h4 {
-  margin: 4px 0;
-  font-size: 14px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
 }
 
-.booking-panel-form label {
-  font-size: 12px;
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.gender-note {
+  font-size: 11px;
+  font-weight: 500;
   color: var(--color-text-muted);
+}
+
+.gent-text {
+  color: #dc2626;
+}
+
+.female-text {
+  color: #ec4899;
 }
 
 .booking-panel-form input {
-  padding: 9px 10px;
+  padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text);
+  font-size: 13.5px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.booking-panel-form input:focus {
+  border-color: var(--color-primary);
+}
+
+/* =========================================
+   Gender Selector Grid
+========================================= */
+.gender-selector-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.gender-select-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 8px;
+  border-radius: 8px;
+  border: 2px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
   font-size: 13px;
-  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.gender-btn-icon {
+  font-size: 20px;
+}
+
+.gender-btn-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.red-badge {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.rose-badge {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+/* Active States */
+.gender-select-btn.gent-btn.active {
+  border-color: #dc2626;
+  background: #fef2f2;
+  color: #b91c1c;
+  box-shadow: 0 0 0 1px #dc2626;
+}
+
+[data-theme="dark"] .gender-select-btn.gent-btn.active {
+  background: rgba(220, 38, 38, 0.2);
+  color: #fca5a5;
+}
+
+.gender-select-btn.female-btn.active {
+  border-color: #ec4899;
+  background: #fdf2f8;
+  color: #be185d;
+  box-shadow: 0 0 0 1px #ec4899;
+}
+
+[data-theme="dark"] .gender-select-btn.female-btn.active {
+  background: rgba(236, 72, 153, 0.2);
+  color: #fbcfe8;
+}
+
+/* Per Seat Gender Assignment */
+.per-seat-gender-wrap {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+[data-theme="dark"] .per-seat-gender-wrap {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.per-seat-label {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.per-seat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.per-seat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.per-seat-name {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.per-seat-toggle-btns {
+  display: flex;
+  gap: 4px;
+}
+
+.mini-gender-btn {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.mini-gender-btn.mini-gent.active {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+  font-weight: 700;
+}
+
+.mini-gender-btn.mini-female.active {
+  background: #ec4899;
+  color: #ffffff;
+  border-color: #ec4899;
+  font-weight: 700;
+}
+
+.proceed-btn {
+  height: 44px;
+  font-size: 15px;
+  margin-top: 4px;
 }
 
 .booking-panel-terms {
-  font-size: 11px;
+  font-size: 11.5px;
   color: var(--color-text-muted);
   text-align: center;
-  margin: 4px 0 0;
+  margin: 2px 0 0;
 }
