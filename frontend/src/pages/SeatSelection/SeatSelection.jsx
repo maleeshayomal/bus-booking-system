@@ -1,7 +1,8 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SeatLayout from "../../components/SeatLayout/SeatLayout";
 import BookingPanel from "../../components/BookingPanel/BookingPanel";
+import EmailOtpModal from "../../components/EmailOtpModal/EmailOtpModal";
 import { BookingContext } from "../../context/BookingContext";
 import { useSeats } from "../../hooks/useSeats";
 import { sampleBookedSeats, sampleFemaleSeats } from "../../services/mockData";
@@ -9,8 +10,9 @@ import "./SeatSelection.css";
 
 export default function SeatSelection() {
   const navigate = useNavigate();
-  const { booking, toggleSeat, updatePassenger } = useContext(BookingContext);
+  const { booking, toggleSeat, updatePassenger, setOtpVerified } = useContext(BookingContext);
   const bus = booking.selectedBus;
+  const [showOtpModal, setShowOtpModal] = useState(false);
 
   const { seats, selected, toggleSeat: toggleLocalSeat } = useSeats(
     sampleBookedSeats,
@@ -27,13 +29,33 @@ export default function SeatSelection() {
     toggleLocalSeat(seat);
   };
 
-  const handleProceed = () => {
-    // sync selected seats into shared booking context
+  const handleProceedClick = () => {
+    // 1. Sync selected seats
     selected.forEach((s) => {
       if (!booking.selectedSeats.includes(s)) toggleSeat(s);
     });
+
+    // 2. If OTP already verified, navigate directly to payment
+    if (booking.otpVerified) {
+      navigate("/payment");
+      return;
+    }
+
+    // 3. Otherwise open Email OTP verification modal
+    setShowOtpModal(true);
+  };
+
+  const handleOtpSuccess = () => {
+    setOtpVerified(true);
+    setShowOtpModal(false);
     navigate("/payment");
   };
+
+  const isFormValid =
+    selected.length > 0 &&
+    Boolean(booking.passenger.fullName?.trim()) &&
+    Boolean(booking.passenger.phone?.trim()) &&
+    Boolean(booking.passenger.email?.trim());
 
   return (
     <div className="container seat-selection-page">
@@ -95,10 +117,20 @@ export default function SeatSelection() {
           basePrice={bus.price}
           passenger={booking.passenger}
           onPassengerChange={updatePassenger}
-          onSubmit={handleProceed}
-          disabled={selected.length === 0 || !booking.passenger.fullName || !booking.passenger.phone}
+          onSubmit={handleProceedClick}
+          submitLabel={booking.otpVerified ? "Proceed to Payment" : "Verify Email & Proceed"}
+          disabled={!isFormValid}
         />
       </div>
+
+      {/* Email OTP Verification Modal */}
+      <EmailOtpModal
+        isOpen={showOtpModal}
+        email={booking.passenger.email}
+        passengerName={booking.passenger.fullName}
+        onClose={() => setShowOtpModal(false)}
+        onSuccess={handleOtpSuccess}
+      />
     </div>
   );
 }
